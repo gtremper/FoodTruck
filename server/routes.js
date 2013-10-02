@@ -39,7 +39,10 @@ exports.loaddata = function(){
     res.on('end', function(){
       var obj = JSON.parse(data);
       console.log("DATA");
-      console.log(obj)
+      var filtered = _.filter(obj, function(food){
+        return Object.keys(food).length === 3;
+      });
+      console.log(filtered);
     });
   });
 }
