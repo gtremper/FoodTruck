@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
+    Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://gtremper:fessieisadog@paulo.mongohq.com:10082/FoodTrucks');
 

@@ -1,4 +1,6 @@
-var FoodTrucks = require('./models').FoodTrucks
+var FoodTrucks = require('./models').FoodTrucks,
+    _ = require('underscore'),
+    http = require('http')
 
 /***** Index and views *****/
 
@@ -26,5 +28,18 @@ exports.foodtrucks = function(req,res){
 Load foodtruck data into database
 */
 exports.loaddata = function(){
-  
+  http.get('http://data.sfgov.org/resource/rqzj-sfat.json?$select=applicant,longitude,latitude',function(res){
+    console.log('Got response');
+    var data = '';
+
+    res.on('data', function(chunk){
+      data += chunk;
+    });
+
+    res.on('end', function(){
+      var obj = JSON.parse(data);
+      console.log("DATA");
+      console.log(obj)
+    });
+  });
 }
