@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('FoodTruckApp', [])
+angular.module('FoodTruckApp', ['google-maps'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {

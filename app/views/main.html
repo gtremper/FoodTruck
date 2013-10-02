@@ -1,9 +1,21 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<div ng-controller='MainCtrl'>
+  <h1> Food Truck Finding </h1>
+  
+  <div class="row">
+    <div class="span3">
+      <h4>Search</h4>
+      <p>
+        This is a list of stuff and shit
+      </p>
+    </div>
+    <div class="span9">
+      <h4>The map</h4>
+      <div google-map=''
+        class="google-map-container"
+        center='center'
+        draggable='true'
+        zoom='zoom'
+        mark-click='true'></div>
+    </div>
+  </div>
 </div>
