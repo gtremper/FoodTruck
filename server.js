@@ -6,7 +6,7 @@ var app = module.exports = express();
 
 // all environments
 app.configure(function(){
-  app.set('port', process.env.PORT || 80);
+  app.set('port', process.env.PORT || 8000);
   app.use(express.compress());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
