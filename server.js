@@ -13,8 +13,9 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({secret: 'keyboard cat'}));
-  app.use(express.static(path.join(__dirname, '.tmp')));
-  app.use(express.static(path.join(__dirname, 'app')));
+  //app.use(express.static(path.join(__dirname, '.tmp')));
+  //app.use(express.static(path.join(__dirname, 'app')));
+  app.use(express.static(path.join(__dirname, 'dist')));
   app.use(app.router);
 });
 

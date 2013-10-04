@@ -2,7 +2,7 @@
 
 angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
 
-  var foodtruck = {}
+  var foodtruck = {};
 
   //List of current trucks displayed
   foodtruck.currentTrucks = [];
@@ -27,10 +27,10 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
         foodtruck.currentTrucks.push(truck);
       });
     })
-    .error(function(data){
-      console.log("ERROR GETTING TRUCKS")
+    .error(function(){
+      console.log('ERROR GETTING TRUCKS');
     });
-  }
+  };
 
   return foodtruck;
 }]);

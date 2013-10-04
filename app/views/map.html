@@ -3,18 +3,27 @@
   
   <div class="row">
     <div class="span3">
-      <h4>Nearby Trucks</h4>
+    <h4>Food Trucks</h4>
       <ol>
         <li ng-repeat='truck in foodtruck.currentTrucks'>
           {{truck.name}}
         </li>
       </ol>
-      <div>
-        {{foodtruck.currentTrucks|json}}
-      </div>
     </div>
     <div class="span9">
-      <h4>The map</h4>
+      <div>
+        Number of trucks: 
+        <select ng-model='numTrucks'>
+          <option ng-selected='selected'>5</option>
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+        </select>
+        <button class='btn' ng-click="getCurrentLocation()">
+          <i class="icon-screenshot"></i>
+          Current Location
+        </button>
+      </div>
       <div
         google-map=''
         class='google-map-container'
