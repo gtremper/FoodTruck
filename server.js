@@ -13,20 +13,17 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({secret: 'keyboard cat'}));
-  app.use(app.router);
+  app.use(express.static(path.join(__dirname, '.tmp')));
   app.use(express.static(path.join(__dirname, 'app')));
-})
+  app.use(app.router);
+});
 
 /** Initialize foodtruck data in database */
-routes.loaddata();
+//routes.loadData();
 
-
-/** Views **/
-app.get('/', routes.index);
-app.get('/views/:name', routes.views);
 
 /** JSON API **/
-app.get('/api/foodtrucks', routes.foodtrucks)
+app.get('/api/findFoodtrucks', routes.findFoodtrucks)
 
 
 /** Start server **/
