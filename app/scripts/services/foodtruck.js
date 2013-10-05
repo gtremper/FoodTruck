@@ -19,7 +19,6 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
   foodtruck.getNearbyTrucks = function (longitude,latitude,number) {
     // Ignore invalid input
     if (!longitude || !latitude){
-      console.log('derp');
       return;
     }
 

@@ -1,7 +1,7 @@
 Food Truck Finder
 =================
 
-This is the best way to find good and portable food in the City.
+Demo app that you can use to find foodtrucks in SF.
 
 The data used is from https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
 
