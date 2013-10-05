@@ -30,12 +30,14 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
     $http.get('/api/findFoodtrucks', {params: query})
     .success(function(data){
       foodtruck.currentTrucks = [];
-      angular.forEach(data, function(item){
+      var A = 64 //Char code for 'A'
+      angular.forEach(data, function(item,index){
         var truck = {
           'name': item.name,
           'longitude': item.location[0],
           'latitude': item.location[1],
-          'foods': item.foods
+          'foods': item.foods,
+          'icon': String.fromCharCode(A + index)
         };
         foodtruck.currentTrucks.push(truck);
       });

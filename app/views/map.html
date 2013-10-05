@@ -4,29 +4,35 @@
   <div class="row">
     <div class="span3">
     <h4>Food Trucks</h4>
-      <ol>
+      <ol type="A">
         <li ng-repeat='truck in foodtruck.currentTrucks'>
           <span tooltip-placement="right" tooltip="{{truck.foods}}">
           {{truck.name}}
           </span>
         </li>
       </ol>
+      <div ng-hide='foodtruck.currentTrucks.length' class="text-info">
+        Click on the map to show nearby foodtrucks
+      </div>
     </div>
     <div class="span9">
-      <div>
-        Number of trucks: 
-        <select ng-model='numTrucks' style="width: 60px;">
-          <option>5</option>
-          <option>10</option>
-          <option>15</option>
-          <option selected='selected'>20</option>
-          <option>40</option>
-          <option>80</option>
-        </select>
-        <button class='btn' ng-click="getCurrentLocation()">
-          <i class="icon-screenshot"></i>
+      <div class="form-horizontal">
+        <button class='btn btn-info pull-right' ng-click="getCurrentLocation()">
+          <i class="icon-screenshot icon-white"></i>
           Current Location
         </button>
+        <div class="control-group">
+          <label class="control-label" for="numberInput">Number of foodtrucks:</label>
+          <div class="controls">
+            <input id="numberInput"
+                   class="input-mini"
+                   ng-model=""
+                   type="number"
+                   min="1"
+                   max="52"
+                   step="1">
+          </div>
+        </div>
       </div>
       <div
         google-map=''
