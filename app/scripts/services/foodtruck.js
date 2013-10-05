@@ -30,15 +30,17 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
     $http.get('/api/findFoodtrucks', {params: query})
     .success(function(data){
       foodtruck.currentTrucks = [];
-      var A = 64 //Char code for 'A'
+      var A = 65 //Char code for 'A'
       angular.forEach(data, function(item,index){
+        var letter = String.fromCharCode(A + index);
         var truck = {
           'name': item.name,
           'longitude': item.location[0],
           'latitude': item.location[1],
           'foods': item.foods,
-          'icon': String.fromCharCode(A + index)
+          'icon': 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+ letter +'|00FF00|000000'
         };
+        console.log(truck);
         foodtruck.currentTrucks.push(truck);
       });
     })
