@@ -48,10 +48,6 @@ exports.loadData = function(){
       var foodtrucks = _.filter(obj, function(food){
         return Object.keys(food).length === 4;
       });
-      // Remove duplicates
-      foodtrucks = _.uniq(foodtrucks,function(f){
-        return f.applicant;
-      });
 
       // Add each truck to the database
       _.each(foodtrucks, function(food){

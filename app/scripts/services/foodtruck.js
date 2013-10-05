@@ -17,7 +17,9 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
 
   //Update list of current trucks with new location
   foodtruck.getNearbyTrucks = function (longitude,latitude,number) {
+    // Ignore invalid input
     if (!longitude || !latitude){
+      console.log('derp');
       return;
     }
 
@@ -32,7 +34,16 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
       foodtruck.currentTrucks = [];
       var A = 65 //Char code for 'A'
       angular.forEach(data, function(item,index){
-        var letter = String.fromCharCode(A + index);
+        //Calculate letter label
+        var letter;
+        if (index>25){
+          var first = Math.floor(index/26) - 1;
+          var second = index % 26;
+          letter = String.fromCharCode(A + first) + String.fromCharCode(A + second);
+        } else {
+          letter = String.fromCharCode(A + index);
+        }
+
         var truck = {
           'name': item.name,
           'longitude': item.location[0],
@@ -40,7 +51,6 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
           'foods': item.foods,
           'icon': 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+ letter +'|00FF00|000000'
         };
-        console.log(truck);
         foodtruck.currentTrucks.push(truck);
       });
     })
