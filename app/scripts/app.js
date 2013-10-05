@@ -1,6 +1,12 @@
 'use strict';
 
-angular.module('FoodTruckApp', ['google-maps'])
+/***********
+
+Basic routing for the application
+
+***********/
+
+angular.module('FoodTruckApp', ['google-maps','ui.bootstrap'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {

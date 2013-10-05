@@ -1,6 +1,14 @@
+/**********
+
+Main server configuration. The rest of the server can be found
+in the 'server' director. Api.js contains the api logic and
+models.js contains the mongoose database schemas.
+
+**********/
+
 var express = require('express'),
     path = require('path'),
-    routes = require('./server/routes')
+    api = require('./server/api')
 
 var app = module.exports = express();
 
@@ -20,11 +28,13 @@ app.configure(function(){
 });
 
 /** Initialize foodtruck data in database */
-//routes.loadData();
+//Only run once to fill database. Could occasionally update to
+//to stay up to date
+//api.loadData();
 
 
 /** JSON API **/
-app.get('/api/findFoodtrucks', routes.findFoodtrucks)
+app.get('/api/findFoodtrucks', api.findFoodtrucks)
 
 
 /** Start server **/

@@ -4,8 +4,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import "bootstrap-sass/lib/bootstrap";
 
 /* Put your CSS here */
-html, body {
-  margin: 20px;
+
+html{
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -14,8 +16,59 @@ body {
     color: #333;
 }
 
+/* Home page */
+section{
+  padding: 60px 0px;
+}
+
+.section-header{
+  background: url(/images/Golden-Gate-Bridge-in-San-Francisco.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 250px;
+}
+.section-header .pannel{
+  margin: 0 auto;
+  width: 600px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 4px;
+}
+.section-header .main-title{
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.row{
+  margin-bottom: 40px;
+}
+
+.btn-giant{
+  display: block;
+  margin: 0 auto;
+  width:200px;
+  height: 40px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.footer{
+  padding: 80px 0px;
+  background-color: rgb(200,220,180);
+}
+
+
+/* CSS for google maps */
 .google-map-container{
     height: 400px;
     width: 100%;
     display: block;
+}
+
+.google-map-container img{
+  max-width: none;
 }
