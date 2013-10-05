@@ -31,7 +31,7 @@ angular.module('FoodTruckApp')
     //run function when either value changes
     //also check valid input for numTrucks
     function updateLocChange(){
-      var num = $scope.numTrucks
+      var num = $scope.numTrucks;
       if (typeof num==='number' && (num%1)===0){
         foodtruck.getNearbyTrucks($scope.clickedLongitude, $scope.clickedLatitude, num);
       }

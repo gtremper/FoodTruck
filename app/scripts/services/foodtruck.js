@@ -32,7 +32,7 @@ angular.module('FoodTruckApp').factory('foodtruck', ['$http', function($http){
     $http.get('/api/findFoodtrucks', {params: query})
     .success(function(data){
       foodtruck.currentTrucks = [];
-      var A = 65 //Char code for 'A'
+      var A = 65; //Char code for 'A'
       angular.forEach(data, function(item,index){
         //Calculate letter label
         var letter;
