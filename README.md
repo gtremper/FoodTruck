@@ -1,7 +1,7 @@
 Food Truck Finder
 =================
 
-Demo app that you can use to find foodtrucks in SF.
+Demo app that can be used to find foodtrucks in SF.
 
 The data used is from https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
 
@@ -27,6 +27,10 @@ View the repo at https://github.com/gtremper/FoodTruck
 
 Other cool stuff
 ----------------
-Here's a cool seam carver a did javascript.
+
+You can see other projects I've worked on in my github profile
+https://github.com/gtremper
+
+Here's a cool seam carver a did in javascript.
 http://inst.eecs.berkeley.edu/~cs199-ap/
 https://github.com/gtremper/Seam_Carving
