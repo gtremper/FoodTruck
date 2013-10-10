@@ -11,7 +11,7 @@ I used a stack with angularjs, nodejs, expressjs, and mongodb. Angularjs made it
 
 I also used yeomann/bower/grunt to scaffold my application, so the code I wrote can primarily be found in the 'app' and 'server' directories. The minified deployment version can be found in the 'dist' directory
 
-Instilation
+Installation
 -----------
 To download all of the dependencies, run
 * npm install
