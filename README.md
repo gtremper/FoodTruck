@@ -19,18 +19,19 @@ To download all of the dependencies, run
 
 Live demo
 ---------
-A live demo can be viewed at http://sf-foodtrucks.herokuapp.com/
+A live demo can be viewed [here](http://sf-foodtrucks.herokuapp.com/)
 
 Github
 ------
-View the repo at https://github.com/gtremper/FoodTruck
+View the repo [here](https://github.com/gtremper/FoodTruck)
 
 Other cool stuff
 ----------------
 
-You can see other projects I've worked on in my github profile
-https://github.com/gtremper
+You can see other projects I've worked on on my [github profile](https://github.com/gtremper)
 
-Here's a cool seam carver a did in javascript.
-http://inst.eecs.berkeley.edu/~cs199-ap/
-https://github.com/gtremper/Seam_Carving
+[Here's](https://github.com/gtremper/MoneyManage) a group expense-spliting webapp I made with angular and node. [Demo](http://money-manage.herokuapp.com/)
+
+[Here's](https://github.com/gtremper/Seam_Carving) a cool seam carver a did in javascript. [Demo.](http://inst.eecs.berkeley.edu/~cs199-ap/)
+
+A [python wrapper](https://github.com/gtremper/LoanInvestor) I wrote for the LendingClub API.
